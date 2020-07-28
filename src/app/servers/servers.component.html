@@ -14,8 +14,9 @@ class = "form-control"
 <p>{{userName}} </p>
 <button 
 class = "btn btn-primary"
-(click) = "onUserNameClick">Login
-</button><br><br>
+[disabled] = "userName === '' "
+(click) = "userName = '' ">Login &nbsp; &nbsp;
+</button>  &nbsp;&nbsp;
 <!-- <p>{{ serverName }}</p> -->
 <button 
     class = "btn btn-primary" 
