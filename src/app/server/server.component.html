@@ -1,3 +1,9 @@
-<p [ngStyle] = "{backgroundColor : getColor()}" 
+<!-- <button class = "btn btn-primary" (click) = "showSecret =!showSecret">Display Details</button> -->
+<button class = "btn btn-primary" (click) = "onToggleDisplay()">Display Details</button>
+<p *ngIf  ="showSecret">Secret Password = tuna</p>
+<div *ngFor = "let logItem of log "
+[ngStyle] = "{backgroundColor : logItem >=5 ? 'blue': 'transparent'}"
+>{{ logItem }}</div>
+<!-- <p [ngStyle] = "{backgroundColor : getColor()}" 
 [ngClass] = "{online:serverStatus === 'online'}"
->Server with ID{{ serverId }} is {{ serverStatus }}  </p>
+>Server with ID {{ serverId }} is {{ serverStatus }}  </p> -->
